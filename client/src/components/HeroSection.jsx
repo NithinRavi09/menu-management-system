@@ -7,9 +7,11 @@ const HeroSection = () => {
         MENU
       </h1>
 
-      <p className='text-white max-w-2xl text-sm md:text-base'>
-        Please take a look at our menu featuring food, drinks, and brunch. If you'd like to place an order, use the "Order Online" button located below the menu.
-      </p>
+      <p className='text-white max-w-2xl text-sm md:text-base mx-auto leading-relaxed mt-2'>
+      Please take a look at our menu featuring food, drinks, and brunch.
+      <br className="hidden md:block" />
+      If you'd like to place an order, use the "Order Online" button located below the menu.
+    </p>
     </div>
   )
 }

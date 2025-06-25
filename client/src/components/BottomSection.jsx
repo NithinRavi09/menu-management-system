@@ -19,11 +19,11 @@ const BottomSection = () => {
       {/* Logo and Social Icons section */}
       <div className='flex flex-col items-center justify-center p-6 border border-gray-700 rounded-lg shadow-lg flex-1 min-w-[280px] max-w-[350px]'>
         <div className='mb-4'>
-          <img src={assets.icon} alt="" />
+          <img src={assets.icon} alt="" className='w-8 h-8' />
         </div>
-        {/* <h1 className='text-2xl md:text-3xl font-extrabold text-white mb-4 tracking-widest'>
+        <h1 className='text-2xl md:text-3xl font-extrabold text-white mb-4 tracking-widest'>
           DEEP<span className='text-blue-500'>NET</span> SOFT
-        </h1> */}
+        </h1>
       </div>
 
       {/* Find us section */}
