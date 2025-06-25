@@ -55,7 +55,7 @@ const MenuSection = () => {
           {menus.map((menu) => (
             <button
               key={menu._id}
-              className={`px-6 py-2 sm:px-8 sm:py-3 font-bold border border-blue-500 rounded-md transition-all duration-300 ${
+              className={`px-6 py-2 sm:px-8 sm:py-3 cursor-pointer font-bold border border-blue-500 rounded-md transition-all duration-300 ${
                 menu._id === activeMenuId
                   ? "bg-blue-500 text-white"
                   : "bg-black text-white hover:bg-blue-600"
