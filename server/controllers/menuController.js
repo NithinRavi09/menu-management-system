@@ -2,6 +2,8 @@ const Menu = require('../model/Menu.js')
 const MenuItem = require('../model/MenuItems.js');
 const mongoose = require('mongoose');
 
+
+// controllect for get menus
 const getMenu = async (req, res) => {
   try {
     const menus = await Menu.find(); 
@@ -12,6 +14,7 @@ const getMenu = async (req, res) => {
   }
 };
 
+// function for add menue
 const addMenu = async (req, res) => {
   try {
     const { name, description } = req.body;
@@ -30,7 +33,7 @@ const addMenu = async (req, res) => {
   }
 };
 
-
+// function for get menu items 
 const getMenuItems = async (req, res) => {
   try {
     const menuId = req.params.menuId;
@@ -48,6 +51,7 @@ const getMenuItems = async (req, res) => {
   }
 };
 
+//funciton for get menu by Id 
 const getMenuById = async (req, res) => {
     try {
     const menu = await Menu.findById(req.params.menuId);
@@ -58,6 +62,7 @@ const getMenuById = async (req, res) => {
   }
 }
 
+// function for add menu Items 
 const addMenuItem = async (req, res) => {
   try {
     const { name, description, price, menuId } = req.body;

@@ -5,11 +5,13 @@ const router = require('./routes/menuRoute.js')
 const app = express();
 require('dotenv').config();
 
-
+//middleware
 app.use(cors())
 app.use(express.json());
 app.use(express.urlencoded({extended: true}));
 
+
+//mongoDB connection
 mongoose.connect(process.env.MONGO_URI)
   .then(() => console.log('✅ MongoDB connected to Atlas'))
   .catch((err) => console.error('❌ MongoDB connection error:', err));
