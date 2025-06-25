@@ -11,20 +11,33 @@ const Navbar = () => {
     location.pathname === path ? "text-blue-500" : "text-white";
 
   return (
-    <div className="w-full bg-[#121618] text-white flex items-end justify-between px-6 md:px-16 lg:px-36 py-5 relative">
+    <div className="w-full bg-[#121618] text-white flex items-end justify-between px-6 md:px-16 lg:px-36 relative">
       {/* Logo Section */}
 
-      <div className="flex flex-col items-start">
-        <div className="flex items-center gap-1">
-          <img src={assets.icon} alt="logo" className="w-10 h-10" />
-          <span className="text-xl font-bold text-blue-500">DEEP</span>
-          <span className="text-xl font-bold text-white">NET</span>
-        </div>
-        <span className="text-sm text-gray-300 ml-9">SOFT</span>
+       <div className="flex items-end">
+    
+    {/* Icon - Positioned slightly lower */}
+    <div className="relative -bottom-8">
+      <img
+        src={assets.icon}
+        alt="logo"
+        className="w-24 h-24 rounded-full p-1 shadow-lg -mb-3"
+      />
+    </div>
+
+    {/* Text block: DEEP NET above, SOFT below */}
+    <div className="flex flex-col leading-tight relative -bottom-7">
+      <div className="flex gap-1">
+        <span className="text-xl font-bold text-blue-500">DEEP</span>
+        <span className="text-xl font-bold text-white">NET</span>
       </div>
+      <span className="text-xl text-gray-300">SOFT</span>
+    </div>
+
+  </div>
 
       {/* Desktop Nav */}
-      <div className="hidden md:flex gap-8 text-lg font-medium">
+      <div className="hidden md:flex gap-8 text-md font-medium pb-3">
         <Link to="/" className={isActive("/")}>
           Home
         </Link>
