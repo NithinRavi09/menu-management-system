@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { assets } from "../assets/assets";
 import { useParams } from "react-router-dom";
+import toast from "react-hot-toast";
 
 const Items = () => {
   const { menuId } = useParams();
@@ -57,6 +58,7 @@ const Items = () => {
         }
       );
 
+      toast.success("Item added successfully...")
       if (!response.ok) {
         const error = await response.json();
         throw new Error(error.message);

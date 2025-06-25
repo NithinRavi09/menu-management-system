@@ -31,6 +31,7 @@ const ShowMenu = () => {
         `${import.meta.env.VITE_API_BASE_URL}/api/addMenu`,
         formData
       );
+      toast.success("Menu added successfully...")
       setFormData({ name: "", description: "" });
       setShowForm(false);
       fetchMenus();
