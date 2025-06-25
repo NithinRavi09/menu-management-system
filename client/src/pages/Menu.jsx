@@ -1,6 +1,6 @@
 import React from 'react'
 import HeroSection from '../components/HeroSection'
-import MenuSection from '../components/menuSection'
+import MenuSection from '../components/MenuSection';
 import BottomSection from '../components/BottomSection'
 import Footer from '../components/Footer'
 
